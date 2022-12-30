@@ -1,4 +1,4 @@
-# vue-client
+# 07_vue_workshop
 
 ## Project setup
 ```

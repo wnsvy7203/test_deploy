@@ -1,33 +1,24 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import TodoList from '@/views/todos/TodoList'
-import CreateTodo from '@/views/todos/CreateTodo'
-import Signup from '@/views/accounts/Signup'
-import Login from '@/views/accounts/Login'
+import TheLotto from '@/views/TheLotto'
+import TheLunch from '@/views/TheLunch'
+
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/todos',
-    name: 'TodoList',
-    component: TodoList,
+    path: '/',
+    name: 'lunch',
+    component: TheLunch
+    // component: () => import('@/views/TheLunch')  // lazy loading 
   },
   {
-    path: '/todos/create',
-    name: 'CreateTodo',
-    component: CreateTodo,
+    path: '/lotto/:lunchMenu',
+    name: 'lotto',
+    component: TheLotto
   },
-  {
-    path: '/accounts/signup',
-    name: 'Signup',
-    component: Signup,
-  },
-  {
-    path: '/accounts/login',
-    name: 'Login',
-    component: Login,
-  },
+
 ]
 
 const router = new VueRouter({
